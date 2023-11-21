@@ -99,6 +99,8 @@ class main{
             System.out.println("Algo de errado aconteceu. Revise o código!");
         }
 
-        System.out.println("Os valores armazenados até o momento são:" + valor1 + tipo_operacao + valor2);
+
+        //Mensagem temporária para teste apagar depois quando for finalizar a saída dos dados de forma correta
+        System.out.println("Mensagem temporária: Os valores armazenados até o momento são:" + valor1 + tipo_operacao + valor2);
     }
 }
