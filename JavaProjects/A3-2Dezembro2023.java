@@ -42,7 +42,7 @@ class main{
                         break;
                     }
                 }
-                if (numeroValido == true){
+                if (numeroValido){
                     valor1 = Integer.parseInt(input);
                     break;
                 }
@@ -71,12 +71,34 @@ class main{
             System.out.println("Algo de errado aconteceu. Revise o código né!");
         }
 
-        /*try {
-            System.out.println("Digite o segundo valor binário: ");
-            valor2 = inputScanner.nextInt();
-        } catch (Exception e) {
-            System.out.println("Por favor, digite um número.");
-        }*/
+        System.out.println("Digite o segundo valor:");
+        try{
+            Scanner inputScanner = new Scanner(System.in);
+            while(true) {
+                String input = inputScanner.nextLine().trim();
+                for (int i = 0; i < input.length(); i++) {
+                    Character caractere = input.charAt(i);
+                    if (Character.isDigit(caractere) == false) {
+                        numeroValido = false;
+                        break;
+                    }
+                    else{
+                        numeroValido = true;
+                        break;
+                    }
+                }
+                if (numeroValido){
+                    valor2 = Integer.parseInt(input);
+                    break;
+                }
+                else{
+                    System.out.println("Tente com um número válido:");
+                }
+            }
+        } catch (Exception e){
+            System.out.println("Algo de errado aconteceu. Revise o código!");
+        }
 
+        System.out.println("Os valores armazenados até o momento são:" + valor1 + tipo_operacao + valor2);
     }
 }

@@ -1,0 +1,47 @@
+// Início do código e entrada dos dados //
+
+Primeiro, a falta da class main para iniciar o código é um erro claro, além da falta da importação do Scanner que estaria sendo utilizado no mesmo, também
+importaremos a biblioteca util Arraylist para facilitar nossa vida.
+
+Segundo, foi identificado que o usuário poderia fazer um estouro de buffer caso utilizasse caracteres inválidos nos inputs. Portanto lidaremos com isso com
+o método try catch.
+
+Terceiro, identificamos aqui que as variáveis estão sendo criadas logo após a entrada de dados, para evitarmos problemas futuros e por boas práticas,
+criaremos essas variáveis anteriormente.
+
+Quarto, criaremos uma lista de operações existentes para verificar se o usuário entrou com uma operação válida, assim evitando erros no nosso código.
+
+
+// Processamento dos dados
+
+Aqui chegamos na parte em que utilizaremos nossos dados para algum propósito, nesse caso, contas matemáticas.
+
+
+
+
+
+
+
+
+
+
+
+
+// Saída dos dados //
+
+Com tudo isso feito só nos basta partir para a área da saída dos nossos dados, portanto vamos verifica-la.
+
+Chegando aqui e verificando de forma rasa já podemos notar, a quantidade interminável de if else que são capazes de gerar agonia, 
+portanto vamos refazer isso de forma que nosso código fique mais limpo, seguro e eficiente.
+
+[]
+
+
+
+
+
+
+
+
+
+System.out.println("Resultado binário: " + Integer.toBinaryString(resultado));
