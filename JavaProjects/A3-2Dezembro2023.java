@@ -9,6 +9,7 @@ class main{
 
         // Criaremos uma Array para armazenar os tipos de operações válidas;
 
+
         List<Character> validChars = Arrays.asList('*', '/', '+', '-');
 
         //Criando as variáveis que serão utilizadas ao longo do processo;
@@ -21,12 +22,13 @@ class main{
         int resultadoDiv = valor1 / valor2;
         String tipo_operacao = "Não definida";
         boolean numeroValido = true;
-            
+
 
         ///
-        
+
         System.out.println("Digite o primeiro valor:");
-        try(Scanner inputScanner = new Scanner(System.in)){
+        try{
+            Scanner inputScanner = new Scanner(System.in);
             while(true) {
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length(); i++) {
@@ -53,22 +55,21 @@ class main{
         }
 
 
-        
         System.out.println("Digite a operação (+, -, *, /): ");
-        try (Scanner inputScanner = new Scanner(System.in)) {
-			while (true) {
-				String input = inputScanner.nextLine().trim();
-				if (input.length() == 1 && validChars.contains(input.charAt(0))) {
+        try{
+            Scanner inputScanner = new Scanner(System.in);
+            while (true) {
+                String input = inputScanner.nextLine().trim();
+                if (input.length() == 1 && validChars.contains(input.charAt(0))) {
                     tipo_operacao = input;
-					break;
-				} else {
-					System.out.println("Tente novamente com um tipo de operação válido (*, /, +, -):");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println("Algo de errado aconteceu. Revise o código né!");
-		}
-        
+                    break; // entrada válida, saia do loop
+                } else {
+                    System.out.println("Tente novamente com um tipo de operação válido (*, /, +, -):");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Algo de errado aconteceu. Revise o código né!");
+        }
 
         /*try {
             System.out.println("Digite o segundo valor binário: ");
@@ -76,6 +77,6 @@ class main{
         } catch (Exception e) {
             System.out.println("Por favor, digite um número.");
         }*/
-        
+
     }
 }
