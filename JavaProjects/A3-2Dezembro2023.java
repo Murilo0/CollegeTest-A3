@@ -57,11 +57,7 @@ class main{
         System.out.println("Digite a operação (+, -, *, /): ");
         try (Scanner inputScanner = new Scanner(System.in)) {
 			while (true) {
-				// o "nextLine" ao invés do "next" é pra pegar o input mesmo que o usuário só tecle enter sem digitar nada
-				// o "trim" é uma função pra remover espaços vazios
 				String input = inputScanner.nextLine().trim();
-
-				// verifica se tem apenas um caracter primeiro. Se não tiver, nem chamará o "contains"
 				if (input.length() == 1 && validChars.contains(input.charAt(0))) {
                     tipo_operacao = input;
 					break; // entrada válida, saia do loop
@@ -72,7 +68,7 @@ class main{
 		} catch (Exception e) {
 			System.out.println("Algo de errado aconteceu. Revise o código né!");
 		}
-        
+	    
         /*try {
             System.out.println("Digite o segundo valor binário: ");
             valor2 = inputScanner.nextInt();
