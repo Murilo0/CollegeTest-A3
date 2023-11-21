@@ -1,3 +1,4 @@
+package JavaProjects;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -73,6 +74,7 @@ class main{
 			System.out.println("Algo de errado aconteceu. Revise o código né!");
 		}
         
+
         /*try {
             System.out.println("Digite o segundo valor binário: ");
             valor2 = inputScanner.nextInt();
