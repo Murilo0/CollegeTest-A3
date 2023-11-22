@@ -15,7 +15,11 @@ E aqui a maior parte do trabalho já foi feita.
 // Processamento dos dados
 
 Depois disso chegamos na parte em que utilizaremos nossos dados para algum propósito, nesse caso, contas matemáticas, aqui podemos também facilitar 
-a leitura e manutenção do código criando um método para calcular, e apenas o chamar quando formos mostrar o resultado da operação.
+a leitura e manutenção do código criando um método para calcular, que receberá a string do input, transformará automaticamente em inteiro para realizar 
+o cálculo, também criaremos um método para traduzir um inteiro para uma string binária novamente. Então, quando formos calcular algo é apenas chamar
+o método de tradução seguido pelo de cálculo assim nos retornará o valor calculado em binário. 
+
+Por exemplo: convertToBinaryString(calcule(valor1, tipo_operacao, valor2))
 
 // Saída das informações
 

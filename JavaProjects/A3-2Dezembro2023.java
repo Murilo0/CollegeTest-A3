@@ -6,22 +6,31 @@ import java.util.List;
 
 class main{
 
-    static int calcule(int x , String operator ,int y){
+
+    static int calcule(String x , String operator , String y){
         if (operator.equals("+")){
-            return (x + y);
+            int resultado = Integer.parseInt(x,2) + Integer.parseInt(y,2);
+            return resultado;
         }
         if (operator.equals("-")){
-            return(x - y);
+            int resultado = Integer.parseInt(x,2) - Integer.parseInt(y,2);
+            return resultado;
         }
         if (operator.equals("*")){
-            return (x * y);
+            int resultado = Integer.parseInt(x,2) * Integer.parseInt(y,2);
+            return resultado;
         }
         if (operator.equals("/")){
-            return (x / y);
+            int resultado = Integer.parseInt(x,2) / Integer.parseInt(y,2);
+            return resultado;
         }
         else{
             return 0;
         }
+    }
+
+    static String convertToBinaryString(int x){
+        return Integer.toBinaryString(x);
     }
 
     public static void main(String[] args) {
@@ -32,11 +41,11 @@ class main{
 
         //Criando as variáveis que serão utilizadas ao longo do processo;
 
-        int valor1= 1;
-        int valor2= 1;
+        String valor1= "0";
+        String valor2= "0";
         String tipo_operacao = "Não definida";
         boolean numeroValido = true;
-
+  
         ///
 
         System.out.println("Digite o primeiro valor:");
@@ -46,7 +55,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length(); i++) {
                     Character caractere = input.charAt(i);
-                    if (Character.isDigit(caractere) == false) {
+                    if (!Character.isDigit(caractere) && (i) !='0' || input.charAt(i) !='1') {
                         numeroValido = false;
                         break;
                     }
@@ -56,7 +65,7 @@ class main{
                     }
                 }
                 if (numeroValido){
-                    valor1 = Integer.parseInt(input);
+                    valor1 = input;
                     break;
                 }
                 else{
@@ -91,7 +100,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length(); i++) {
                     Character caractere = input.charAt(i);
-                    if (Character.isDigit(caractere) == false) {
+                    if (!Character.isDigit(caractere) && (i) !='0' || input.charAt(i) !='1') {
                         numeroValido = false;
                         break;
                     }
@@ -101,7 +110,7 @@ class main{
                     }
                 }
                 if (numeroValido){
-                    valor2 = Integer.parseInt(input);
+                    valor2 = input;
                     break;
                 }
                 else{
@@ -114,9 +123,9 @@ class main{
 
         String mensagemFinal = """
             
-                A operação solicitada foi: %d %s %d = %d
+                A operação solicitada foi: %s %s %s = %s
 
-                """.formatted(valor1, tipo_operacao , valor2 , calcule(valor1, tipo_operacao, valor2));
+                """.formatted(valor1, tipo_operacao , valor2 , convertToBinaryString(calcule(valor1, tipo_operacao, valor2)));
 
         System.out.println(mensagemFinal);
 
