@@ -1,55 +1,24 @@
 // Início do código e entrada dos dados //
 
 Primeiro, a falta da class main para iniciar o código é um erro claro, além da falta da importação do Scanner que estaria sendo utilizado no mesmo, também
-importaremos a biblioteca util Arraylist para facilitar nossa vida.
+importaremos o util de List e de Arrays para facilitar nossa vida.
 
 Segundo, identificamos aqui que as variáveis estão sendo criadas logo após a entrada de dados, para evitarmos problemas futuros e por boas práticas,
 criaremos essas variáveis anteriormente.
 
-Terceiro, foi identificado que o usuário poderia fazer um estouro de buffer caso utilizasse caracteres inválidos nos inputs. Portanto lidaremos com isso com
-o método try catch em todas as entradas, juntamente com um loop para forçar o usuário a utilizar um caractere válido. Para, concluirmos esse passo,
+Terceiro, foi identificado que o usuário poderia fazer um estouro de buffer caso utilizasse caracteres inválidos nos inputs. Portanto lidaremos com isso 
+com o método try catch em todas as entradas, juntamente com um loop para forçar o usuário a utilizar um caractere válido. Para, concluirmos esse passo,
 criaremos uma lista com as operações possíveis para verificar se o usuário entrou com uma operação válida, assim evitando erros e exceções no nosso código.
 
 E aqui a maior parte do trabalho já foi feita.
 
 // Processamento dos dados
 
-Depois disso chegamos na parte em que utilizaremos nossos dados para algum propósito, nesse caso, contas matemáticas, aqui podemos também adiantar 
-a facilidade dasaída dos dados criando variáveis para as possíveis operações como padrão e apenas seleciona-las dependendo do tipo de operação 
-escolhida pelo usuário, novamente criaremos essas variáveis no início do nosso código por boas práticas.
+Depois disso chegamos na parte em que utilizaremos nossos dados para algum propósito, nesse caso, contas matemáticas, aqui podemos também facilitar 
+a leitura e manutenção do código criando um método para calcular, e apenas o chamar quando formos mostrar o resultado da operação.
 
+// Saída das informações
 
+Agora é só criar uma mensagem para exibir a operação e seu respectivo resultado, para isso usaremos uma formatação para manter o código mais limpo.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Saída dos dados //
-
-Com tudo isso feito só nos basta partir para a área da saída dos nossos dados, portanto vamos verifica-la.
-
-Chegando aqui e verificando de forma rasa já podemos notar, a quantidade interminável de if else que são capazes de gerar agonia, 
-portanto vamos refazer isso de forma que nosso código fique mais limpo, seguro e eficiente.
-
-[]
-
-
-
-
-
-
-
-
-
-System.out.println("Resultado binário: " + Integer.toBinaryString(resultado));
+E é isso! Nosso código está seguro contra possíveis usuários buscadores de erros! Haha

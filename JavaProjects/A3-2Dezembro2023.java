@@ -5,10 +5,28 @@ import java.util.Scanner;
 import java.util.List;
 
 class main{
+
+    static int calcule(int x , String operator ,int y){
+        if (operator.equals("+")){
+            return (x + y);
+        }
+        if (operator.equals("-")){
+            return(x - y);
+        }
+        if (operator.equals("*")){
+            return (x * y);
+        }
+        if (operator.equals("/")){
+            return (x / y);
+        }
+        else{
+            return 0;
+        }
+    }
+
     public static void main(String[] args) {
 
         // Criaremos uma Array para armazenar os tipos de operações válidas;
-
 
         List<Character> validChars = Arrays.asList('*', '/', '+', '-');
 
@@ -16,13 +34,8 @@ class main{
 
         int valor1= 1;
         int valor2= 1;
-        int resultadoSoma = valor1 + valor2;
-        int resultadoSub = valor1 - valor2;
-        int resultadoMult = valor1 * valor2;
-        int resultadoDiv = valor1 / valor2;
         String tipo_operacao = "Não definida";
         boolean numeroValido = true;
-
 
         ///
 
@@ -99,8 +112,13 @@ class main{
             System.out.println("Algo de errado aconteceu. Revise o código!");
         }
 
+        String mensagemFinal = """
+            
+                A operação solicitada foi: %d %s %d = %d
 
-        //Mensagem temporária para teste apagar depois quando for finalizar a saída dos dados de forma correta
-        System.out.println("Mensagem temporária: Os valores armazenados até o momento são:" + valor1 + tipo_operacao + valor2);
+                """.formatted(valor1, tipo_operacao , valor2 , calcule(valor1, tipo_operacao, valor2));
+
+        System.out.println(mensagemFinal);
+
     }
 }
