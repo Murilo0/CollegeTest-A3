@@ -31,6 +31,16 @@ class main{
         }
     }
 
+    public static boolean isZeroOrLess(String x) {
+        int tempX = StringToInt(x);
+        if (tempX <= 0) {
+            return true;
+
+        }else{
+            return false;
+        }
+    }
+
     public static boolean isInt(String v) {
         try {
             Integer.parseInt(v);
@@ -40,7 +50,7 @@ class main{
         }
     }
 
-    
+
     public static int getDecimalNumber(int x){
         int tempBinaryNumber = x;
         int decimalNumber = 0;
@@ -107,7 +117,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
+                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input)){
                         numeroValido = false;
                         break;
                     }
@@ -152,7 +162,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (isInt(input) ||input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
+                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input)){
                         numeroValido = false;
                         break;
                     }
