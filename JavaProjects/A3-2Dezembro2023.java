@@ -6,30 +6,41 @@ import java.util.List;
 
 class main{
 
+    public static boolean ltIsNegative(int x) {
+            if(x < 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
     static int calcule(int x , String operator , int y){
         int tempX = getDecimalNumber(x);
         int tempY = getDecimalNumber(y);
+        int result = 0;
 
         if (operator.equals("+")){
-            int resultado = tempX + tempY;
-            return resultado;
+            result = tempX + tempY;
+            return result;
         }
         if (operator.equals("-")){
-            int resultado = tempX - tempY;
-            return resultado;
+            result = tempX - tempY;
+            return result;
         }
         if (operator.equals("*")){
-            int resultado = tempX * tempY;
-            return resultado;
+            result = tempX * tempY;
+            return result;
         }
         if (operator.equals("/")){
-            int resultado = tempX / tempY;
-            return resultado;
+            result = tempX / tempY;
+            return result;
         }
         else{
             return 0;
         }
     }
+    
 
     public static boolean isZeroOrLess(String x) {
         int tempX = StringToInt(x);
@@ -91,39 +102,16 @@ class main{
         return true;
     }
 
-    static boolean verfiyIfCalculeIsPossible(int x, String operator, String y) {
-        int tempY = StringToInt(y);
-        if (operator.equals("-")) {
-            int result = x - tempY;
-            if (result < 0) {
-                return false;
-            }else {
-                return true;
-            }
-        }
-        if (operator.equals("*")) {
-            int result = x * tempY;
-            if (result < 0) {
-                return false;
-            }else {
-                return true;
-            }
-        }
-        if (operator.equals("/")) {
-            int result = x / tempY;
-            if (result < 0) {
-                return false;
-            }else {
-                return true;
-            }
-        }else {
-            return true;
-        }
-    }
-
     static String convertToBinaryString(int x){
-        String result = Integer.toBinaryString(x);
-        return result;
+        if (ltIsNegative(x) == true){
+            x = x * -1;
+            String result = ("-" + Integer.toBinaryString(x));
+            return result;
+        }
+        else{
+            String result = Integer.toBinaryString(x); 
+            return result;
+        } 
     }
 
     public static void main(String[] args) {
@@ -193,7 +181,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input) || !verfiyIfCalculeIsPossible(valor1,tipo_operacao,input)){
+                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input)){
                         numeroValido = false;
                         break;
                     }
