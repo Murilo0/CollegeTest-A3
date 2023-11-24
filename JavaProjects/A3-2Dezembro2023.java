@@ -91,8 +91,39 @@ class main{
         return true;
     }
 
+    static boolean verfiyIfCalculeIsPossible(int x, String operator, String y) {
+        int tempY = StringToInt(y);
+        if (operator.equals("-")) {
+            int result = x - tempY;
+            if (result < 0) {
+                return false;
+            }else {
+                return true;
+            }
+        }
+        if (operator.equals("*")) {
+            int result = x * tempY;
+            if (result < 0) {
+                return false;
+            }else {
+                return true;
+            }
+        }
+        if (operator.equals("/")) {
+            int result = x / tempY;
+            if (result < 0) {
+                return false;
+            }else {
+                return true;
+            }
+        }else {
+            return true;
+        }
+    }
+
     static String convertToBinaryString(int x){
-        return Integer.toBinaryString(x);
+        String result = Integer.toBinaryString(x);
+        return result;
     }
 
     public static void main(String[] args) {
@@ -162,7 +193,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input)){
+                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input)) || isZeroOrLess(input) || !verfiyIfCalculeIsPossible(valor1,tipo_operacao,input)){
                         numeroValido = false;
                         break;
                     }
@@ -176,7 +207,9 @@ class main{
                     break;
                 }
                 else{
-                    System.out.println("Número grande demais ou inválido, tente com um número válido:");
+                    System.out.println("""
+                            Número grande demais ou inválido para a operação (lembre-se como se trata de binário não serão aceitas operações com resultado negativo), 
+                            tente com um número válido:""");
                 }
             }
         } catch (Exception e){
