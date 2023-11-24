@@ -11,13 +11,17 @@ Portanto lidaremos com isso com o método try catch em todas as entradas, juntam
 dados. Para, concluirmos esse passo, criaremos uma lista com as operações possíveis para verificar se o usuário entrou com uma operação válida, assim 
 evitando erros e exceções no nosso código.
 
+Assim como criaremos métodos acima no nosso código para validação dos valores como, verificar se o valor é decimal, verificar se realmente é um binário
+dentre outras coisas. Também criaremos as funções para lidar com as operações aritméticas com os valores binários, como conversores para inteiros para a
+operação ser realizada.
+
 E aqui a maior parte do trabalho já foi feita.
 
 // Processamento dos dados
 
 Depois disso chegamos na parte em que utilizaremos nossos dados para algum propósito, nesse caso, contas matemáticas, aqui podemos também facilitar 
-a leitura e manutenção do código criando um método para calcular, que receberá a string do input, transformará automaticamente em inteiro para realizar 
-o cálculo, também criaremos um método para traduzir um inteiro para uma string binária novamente. Então, quando formos calcular algo é apenas chamar
+a leitura e manutenção do código criando métodos para calcular e retornar valores precisos, também criaremos um tradutor da nossa resposta do cálculo para 
+binário, esse tradutor também saberá se a resposta é negativa e adicionará um "-" caso seja. Então, quando formos calcular algo é apenas chamar
 o método de tradução seguido pelo de cálculo assim nos retornará o valor calculado em binário. 
 
 Por exemplo: convertToBinaryString(calcule(valor1, tipo_operacao, valor2))
