@@ -7,26 +7,69 @@ import java.util.List;
 class main{
 
 
-    static int calcule(String x , String operator , String y){
+    static int calcule(int x , String operator , int y){
+        int tempX = getDecimalNumber(x);
+        int tempY = getDecimalNumber(y);
+
         if (operator.equals("+")){
-            int resultado = Integer.parseInt(x,2) + Integer.parseInt(y,2);
+            int resultado = tempX + tempY;
             return resultado;
         }
         if (operator.equals("-")){
-            int resultado = Integer.parseInt(x,2) - Integer.parseInt(y,2);
+            int resultado = tempX - tempY;
             return resultado;
         }
         if (operator.equals("*")){
-            int resultado = Integer.parseInt(x,2) * Integer.parseInt(y,2);
+            int resultado = tempX * tempY;
             return resultado;
         }
         if (operator.equals("/")){
-            int resultado = Integer.parseInt(x,2) / Integer.parseInt(y,2);
+            int resultado = tempX / tempY;
             return resultado;
         }
         else{
             return 0;
         }
+    }
+
+    public static int getDecimalNumber(int x){
+        int tempBinaryNumber = x;
+        int decimalNumber = 0;
+        int power = 0;
+        while(tempBinaryNumber > 0){
+            //taking the rightmost digit from binaryNumber
+            int temp = tempBinaryNumber%10;
+            //now multiplying the digit and adding it to decimalNumber variable
+            decimalNumber += temp*Math.pow(2, power);
+            //removing the rightmost digit from binaryNumber variable
+            tempBinaryNumber = tempBinaryNumber / 10;
+            //incrementing the power variable by 1 to be used as power for 2
+            power++;
+        }
+        return decimalNumber;
+    }
+
+    public static boolean isBinary(String x){
+        int converted = Integer.parseInt(x);
+        if (converted == 0 || converted == 1 || converted < 0) {
+            return false;
+        }
+        while (converted != 0) {
+            if (converted % 10 > 1) {
+                return false;
+            }
+            converted = converted / 10;
+        }
+        return true;
+    }
+
+    public static int StringToInt(String x){
+        int converted = Integer.parseInt(x);
+        return converted;
+    }
+    
+    public static boolean validNumber(String x){
+        return true;
     }
 
     static String convertToBinaryString(int x){
@@ -41,8 +84,8 @@ class main{
 
         //Criando as variáveis que serão utilizadas ao longo do processo;
 
-        String valor1= "0";
-        String valor2= "0";
+        int valor1= 0;
+        int valor2= 0;
         String tipo_operacao = "Não definida";
         boolean numeroValido = true;
   
@@ -53,9 +96,9 @@ class main{
             Scanner inputScanner = new Scanner(System.in);
             while(true) {
                 String input = inputScanner.nextLine().trim();
-                for (int i = 0; i < input.length(); i++) {
+                for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!Character.isDigit(caractere) && (i) !='0' || input.charAt(i) !='1') {
+                    if (!Character.isDigit(caractere) || (isBinary(input) == false)){
                         numeroValido = false;
                         break;
                     }
@@ -65,7 +108,7 @@ class main{
                     }
                 }
                 if (numeroValido){
-                    valor1 = input;
+                    valor1 = StringToInt(input);
                     break;
                 }
                 else{
@@ -98,9 +141,9 @@ class main{
             Scanner inputScanner = new Scanner(System.in);
             while(true) {
                 String input = inputScanner.nextLine().trim();
-                for (int i = 0; i < input.length(); i++) {
+                for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!Character.isDigit(caractere) && (i) !='0' || input.charAt(i) !='1') {
+                    if (!Character.isDigit(caractere) || (isBinary(input) == false)){
                         numeroValido = false;
                         break;
                     }
@@ -110,7 +153,7 @@ class main{
                     }
                 }
                 if (numeroValido){
-                    valor2 = input;
+                    valor2 = StringToInt(input);
                     break;
                 }
                 else{
@@ -123,11 +166,11 @@ class main{
 
         String mensagemFinal = """
             
-                A operação solicitada foi: %s %s %s = %s
+                A operação solicitada foi: %d %s %d = %s
 
                 """.formatted(valor1, tipo_operacao , valor2 , convertToBinaryString(calcule(valor1, tipo_operacao, valor2)));
 
         System.out.println(mensagemFinal);
-
+    
     }
 }
