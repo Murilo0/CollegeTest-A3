@@ -196,8 +196,7 @@ class main{
                 }
                 else{
                     System.out.println("""
-                            Número grande demais ou inválido para a operação (lembre-se como se trata de binário não serão aceitas operações com resultado negativo), 
-                            tente com um número válido:""");
+                            Número grande demais ou inválido para a operação, tente com um número válido:""");
                 }
             }
         } catch (Exception e){
