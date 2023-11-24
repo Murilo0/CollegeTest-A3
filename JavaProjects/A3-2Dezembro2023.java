@@ -6,7 +6,6 @@ import java.util.List;
 
 class main{
 
-
     static int calcule(int x , String operator , int y){
         int tempX = getDecimalNumber(x);
         int tempY = getDecimalNumber(y);
@@ -32,6 +31,16 @@ class main{
         }
     }
 
+    public static boolean isInt(String v) {
+        try {
+            Integer.parseInt(v);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    
     public static int getDecimalNumber(int x){
         int tempBinaryNumber = x;
         int decimalNumber = 0;
@@ -98,7 +107,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
+                    if (!isInt(input) || input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
                         numeroValido = false;
                         break;
                     }
@@ -143,7 +152,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
+                    if (isInt(input) ||input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
                         numeroValido = false;
                         break;
                     }
