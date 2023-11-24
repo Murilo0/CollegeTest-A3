@@ -6,9 +6,10 @@ importaremos o util de List e de Arrays para facilitar nossa vida.
 Segundo, identificamos aqui que as variáveis estão sendo criadas logo após a entrada de dados, para evitarmos problemas futuros e por boas práticas,
 criaremos essas variáveis anteriormente.
 
-Terceiro, foi identificado que o usuário poderia fazer um estouro de buffer caso utilizasse caracteres inválidos nos inputs. Portanto lidaremos com isso 
-com o método try catch em todas as entradas, juntamente com um loop para forçar o usuário a utilizar um caractere válido. Para, concluirmos esse passo,
-criaremos uma lista com as operações possíveis para verificar se o usuário entrou com uma operação válida, assim evitando erros e exceções no nosso código.
+Terceiro, foi identificado que o usuário poderia fazer um estouro de buffer caso utilizasse um número grande demais ou caracteres inválidos nos inputs. 
+Portanto lidaremos com isso com o método try catch em todas as entradas, juntamente com um loop para forçar o usuário a utilizar uma entrada válida de 
+dados. Para, concluirmos esse passo, criaremos uma lista com as operações possíveis para verificar se o usuário entrou com uma operação válida, assim 
+evitando erros e exceções no nosso código.
 
 E aqui a maior parte do trabalho já foi feita.
 
