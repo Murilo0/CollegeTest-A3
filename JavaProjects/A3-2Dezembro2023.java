@@ -40,7 +40,7 @@ class main{
             //taking the rightmost digit from binaryNumber
             int temp = tempBinaryNumber%10;
             //now multiplying the digit and adding it to decimalNumber variable
-            decimalNumber += temp*Math.pow(2, power);
+            decimalNumber += (temp*Math.pow(2, power));
             //removing the rightmost digit from binaryNumber variable
             tempBinaryNumber = tempBinaryNumber / 10;
             //incrementing the power variable by 1 to be used as power for 2
@@ -67,7 +67,7 @@ class main{
         int converted = Integer.parseInt(x);
         return converted;
     }
-    
+
     public static boolean validNumber(String x){
         return true;
     }
@@ -88,7 +88,7 @@ class main{
         int valor2= 0;
         String tipo_operacao = "Não definida";
         boolean numeroValido = true;
-  
+
         ///
 
         System.out.println("Digite o primeiro valor:");
@@ -98,7 +98,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!Character.isDigit(caractere) || (isBinary(input) == false)){
+                    if (input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
                         numeroValido = false;
                         break;
                     }
@@ -112,7 +112,7 @@ class main{
                     break;
                 }
                 else{
-                    System.out.println("Tente com um número válido:");
+                    System.out.println("Número grande demais ou inválido, tente com um número válido:");
                 }
             }
         } catch (Exception e){
@@ -143,7 +143,7 @@ class main{
                 String input = inputScanner.nextLine().trim();
                 for (int i = 0; i < input.length();) {
                     Character caractere = input.charAt(i);
-                    if (!Character.isDigit(caractere) || (isBinary(input) == false)){
+                    if (input.length() > 10 || !Character.isDigit(caractere) || (!isBinary(input))){
                         numeroValido = false;
                         break;
                     }
@@ -157,7 +157,7 @@ class main{
                     break;
                 }
                 else{
-                    System.out.println("Tente com um número válido:");
+                    System.out.println("Número grande demais ou inválido, tente com um número válido:");
                 }
             }
         } catch (Exception e){
@@ -171,6 +171,6 @@ class main{
                 """.formatted(valor1, tipo_operacao , valor2 , convertToBinaryString(calcule(valor1, tipo_operacao, valor2)));
 
         System.out.println(mensagemFinal);
-    
+
     }
 }
