@@ -1,6 +1,8 @@
 # CollegeTest-A3
 Exercício faculdade, reformulação de código em prol de buscar falhas e corrigi-las.
 
+Vídeo do youtube com a explicação: https://www.youtube.com/watch?v=B1Ihh6AjAro
+
 O código original dado a mim foi esse:
 
 public static void main(String[] args) {
