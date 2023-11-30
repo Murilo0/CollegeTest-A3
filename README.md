@@ -11,6 +11,8 @@ Ana Carolina Salles Ferreira - RA: 323221407
 
 Exercício faculdade, reformulação de código em prol de buscar falhas e corrigi-las.
 
+Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-2Dezembro2023.java
+
 IDE UTILIZADA: INTELIJ
 
 Vídeo do youtube com a explicação: https://www.youtube.com/watch?v=B1Ihh6AjAro
