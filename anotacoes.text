@@ -1,3 +1,8 @@
+Grupo:
+Murilo Mucci Santos - RA: 323127922
+Cleidson Cidreira Ferreira - RA: 1272320636
+Ana Carolina Salles Ferreira - RA: 323221407
+
 // Início do código e entrada dos dados //
 
 Primeiro, a falta da class main para iniciar o código é um erro claro, além da falta da importação do Scanner que estaria sendo utilizado no mesmo, também
