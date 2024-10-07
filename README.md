@@ -1,27 +1,15 @@
 # CollegeTest-A3
 
-GRUPO:
-
-Murilo Mucci Santos - RA: 323127922
-
-Cleidson Cidreira Ferreira - RA: 1272320636
-
-Ana Carolina Salles Ferreira - RA: 323221407
-
-
-Exercício faculdade, reformulação de código em prol de buscar falhas e corrigi-las.
+Exercício da faculdade, reformulação de código em prol de buscar falhas e corrigi-las.
 
 Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-2Dezembro2023.java
 
-IDE UTILIZADA: INTELIJ
-
-Vídeo do youtube com a explicação: https://www.youtube.com/watch?v=B1Ihh6AjAro
-
-
+Vídeo do youtube com a explicação do motivo das mudanças no código: https://www.youtube.com/watch?v=B1Ihh6AjAro
 
 O código original era esse:
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
+
     Scanner scanner = new Scanner(System.in);
 
     System.out.print("Digite o primeiro valor binário: ");
