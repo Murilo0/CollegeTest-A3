@@ -1,10 +1,12 @@
 # CollegeTest-A3
 
-Exercício da faculdade, reformulação de código em prol de buscar falhas e corrigi-las.
+Exercício da faculdade, reformulação de código em prol de buscar falhas e corrigi-las, o código ao final deve ser capaz de executar sem falhas operações matemáticas com valores binários.
 
 Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-2Dezembro2023.java
 
-Vídeo do youtube com a explicação do motivo das mudanças no código: https://www.youtube.com/watch?v=B1Ihh6AjAro
+Vídeo do youtube com a explicação do motivo das mudanças no código: 
+
+https://www.youtube.com/watch?v=B1Ihh6AjAro
 
 O código original era esse:
 
