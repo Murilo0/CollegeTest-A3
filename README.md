@@ -6,7 +6,7 @@ Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-
 
 Vídeo do youtube com a explicação do motivo das mudanças no código: 
 
-https://www.youtube.com/watch?v=B1Ihh6AjAro
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B1Ihh6AjAro?si=TPP6EVuswABc3IIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 O código original era esse:
 
