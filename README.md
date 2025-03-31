@@ -2,7 +2,7 @@
 
 Exercício da faculdade, reformulação de código em prol de buscar falhas e corrigi-las, o código ao final deve ser capaz de executar sem falhas operações matemáticas com valores binários.
 
-Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-2Dezembro2023.java
+Para acessar o código totalmente reformulado acesse a pasta JavaProjects -> A3-2Dezembro2023.java , também é possível acompanhar o processo lógico seguido por mim no arquivo anotacoes.txt.
 
 Vídeo do youtube com a explicação do motivo das mudanças no código: 
 
